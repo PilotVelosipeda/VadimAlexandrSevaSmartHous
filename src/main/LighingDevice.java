@@ -12,7 +12,7 @@ public abstract class LighingDevice implements ElectricDevice {
     public boolean isSwitchedOn() {
         /*return brightness > MIN_BRIGHTNESS;*/
         //Alexandr
-        return true;
+        return brightness > MIN_BRIGHTNESS;
     }
 
     @Override
