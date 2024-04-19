@@ -17,6 +17,7 @@ public abstract class LighingDevice implements ElectricDevice {
 
     @Override
     public void switchOn() {
+        //Mike
         setBrightness(MAX_BRIGHTNESS);
     }
     @Override
