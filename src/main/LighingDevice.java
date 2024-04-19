@@ -38,8 +38,8 @@ public abstract class LighingDevice implements ElectricDevice {
         return brightness;
     }
     public void changeBrightness(double rate) {
-//        double changed = brightness + brightness * rate;
-//        setBrightness(changed);
+        double changed = brightness + brightness * rate;
+        setBrightness(changed);
         //Vadim
     }
 }
