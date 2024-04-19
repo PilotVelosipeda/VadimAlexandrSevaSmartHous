@@ -25,14 +25,14 @@ public abstract class LighingDevice implements ElectricDevice {
     }
 
     public void setBrightness(double level) {
-//        if (level < MIN_BRIGHTNESS) {
-//            brightness = MIN_BRIGHTNESS;
-//        } else if  (level > MAX_BRIGHTNESS) {
-//            brightness = MAX_BRIGHTNESS;
-//        } else {
-//            brightness = level;
-//        }
-        //Seva
+        if (level < MIN_BRIGHTNESS) {
+            brightness = MIN_BRIGHTNESS;
+        } else if  (level > MAX_BRIGHTNESS) {
+            brightness = MAX_BRIGHTNESS;
+        } else {
+            brightness = level;
+        }
+        //Seva develop
     }
     public double getBrightness() {
         return brightness;
