@@ -12,7 +12,7 @@ public abstract class LighingDevice implements ElectricDevice {
     public boolean isSwitchedOn() {
         /*return brightness > MIN_BRIGHTNESS;*/
         //Alexandr
-        return true;
+        return brightness > MIN_BRIGHTNESS;
     }
 
     @Override
@@ -26,21 +26,21 @@ public abstract class LighingDevice implements ElectricDevice {
     }
 
     public void setBrightness(double level) {
-//        if (level < MIN_BRIGHTNESS) {
-//            brightness = MIN_BRIGHTNESS;
-//        } else if  (level > MAX_BRIGHTNESS) {
-//            brightness = MAX_BRIGHTNESS;
-//        } else {
-//            brightness = level;
-//        }
-        //Seva
+        if (level < MIN_BRIGHTNESS) {
+            brightness = MIN_BRIGHTNESS;
+        } else if  (level > MAX_BRIGHTNESS) {
+            brightness = MAX_BRIGHTNESS;
+        } else {
+            brightness = level;
+        }
+        //Seva develop
     }
     public double getBrightness() {
         return brightness;
     }
     public void changeBrightness(double rate) {
-//        double changed = brightness + brightness * rate;
-//        setBrightness(changed);
+        double changed = brightness + brightness * rate;
+        setBrightness(changed);
         //Vadim
     }
 }
